@@ -156,9 +156,10 @@ function App()
 				return (<option key={idx} value={idx}>{val.name}</option>)
 			})}
 		</select>
-		<div id="state-name state-description state-title">
-			<h4>{states[statIdx].name} </h4>
-			<p>{states[statIdx].description}</p>
+		<div  className="NameDescTitle">
+			<div id="state-name">{states[statIdx].name}</div>
+			<div id="state-description">{states[statIdx].description}</div>
+			<div id="state-title">{states[statIdx].name}</div>
 		</div>
 		<br/><br/>
 
@@ -172,13 +173,14 @@ function App()
 				return (<option key={idx} value={idx}>{val.name}</option>)
 			})}
 		</select>
-		<div id="city-name city-description city-title">
-			<h4>{states[statIdx].city[citiIdx].name} </h4>
-			<p>{states[statIdx].city[citiIdx].description}</p>
+		<div className="NameDescTitle">
+			<div id="city-name">{states[statIdx].city[citiIdx].name}</div>
+			<div id="city-description">{states[statIdx].city[citiIdx].description}</div>
+			<div id="city-title">{states[statIdx].city[citiIdx].name}</div>
 		</div>
 		<br/><br/>
 
-		landmark:
+		Towns:
 		<select id="landmark"
 			onChange={function(e){
 				setLandIdx(e.target.value);
@@ -188,9 +190,10 @@ function App()
 				return (<option key={idx} value={idx}>{val.name}</option>)
 			})}
 		</select>
-		<div id="city-name city-description city-title">
-			<h4>{states[statIdx].city[citiIdx].landmarks[landIdx].name} </h4>
-			<p>{states[statIdx].city[citiIdx].landmarks[landIdx].description}</p>
+		<div  className="NameDescTitle">
+			<div id="city-name">{states[statIdx].city[citiIdx].landmarks[landIdx].name}</div>
+			<div id="city-description">{states[statIdx].city[citiIdx].landmarks[landIdx].description}</div>
+			<div id="city-title">{states[statIdx].city[citiIdx].landmarks[landIdx].name}</div>
 		</div>
 		<br/><br/>
 	</div>

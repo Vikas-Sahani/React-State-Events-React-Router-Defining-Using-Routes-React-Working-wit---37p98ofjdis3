@@ -14,3 +14,13 @@ button{
 .bg-pink{
 	background-color:pink;
 }
+
+select{
+    width: 150px;
+}
+
+.NameDescTitle{
+    border: 1px black solid;
+    width: 500px;
+    margin-left: 1000px;
+}
