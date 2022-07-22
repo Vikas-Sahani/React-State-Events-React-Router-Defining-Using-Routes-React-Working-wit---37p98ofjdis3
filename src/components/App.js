@@ -141,9 +141,58 @@ const states = [{
 function App() 
 {
 	// Do not alter/remove main div
+	const [statIdx, setStatIdx] = useState(0);
+	const [citiIdx, setCitiIdx] = useState(0);
+	const [landIdx, setLandIdx] = useState(0);
 	return (
 	<div id="main">
-		
+		State:
+		<select id="state" 
+			onChange={function(e){
+				setStatIdx(e.target.value);
+			}}
+		>
+			{states.map((val, idx)=>{
+				return (<option key={idx} value={idx}>{val.name}</option>)
+			})}
+		</select>
+		<div id="state-name state-description state-title">
+			<h4>{states[statIdx].name} </h4>
+			<p>{states[statIdx].description}</p>
+		</div>
+		<br/><br/>
+
+		City:
+		<select id="city"
+			onChange={function(e){
+				setCitiIdx(e.target.value);
+			}}
+		>
+			{states[statIdx].city.map((val,idx)=>{
+				return (<option key={idx} value={idx}>{val.name}</option>)
+			})}
+		</select>
+		<div id="city-name city-description city-title">
+			<h4>{states[statIdx].city[citiIdx].name} </h4>
+			<p>{states[statIdx].city[citiIdx].description}</p>
+		</div>
+		<br/><br/>
+
+		landmark:
+		<select id="landmark"
+			onChange={function(e){
+				setLandIdx(e.target.value);
+			}}
+		>
+			{states[statIdx].city[citiIdx].landmarks.map((val,idx)=>{
+				return (<option key={idx} value={idx}>{val.name}</option>)
+			})}
+		</select>
+		<div id="city-name city-description city-title">
+			<h4>{states[statIdx].city[citiIdx].landmarks[landIdx].name} </h4>
+			<p>{states[statIdx].city[citiIdx].landmarks[landIdx].description}</p>
+		</div>
+		<br/><br/>
 	</div>
 	);
 }
