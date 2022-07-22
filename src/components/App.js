@@ -157,9 +157,9 @@ function App()
 			})}
 		</select>
 		<div  className="NameDescTitle">
-			<div id="state-name">{states[statIdx].name}</div>
-			<div id="state-description">{states[statIdx].description}</div>
 			<div id="state-title">{states[statIdx].name}</div>
+			<div id="state-name"> </div>
+			<div id="state-description">{states[statIdx].description}</div>
 		</div>
 		<br/><br/>
 
@@ -174,9 +174,9 @@ function App()
 			})}
 		</select>
 		<div className="NameDescTitle">
-			<div id="city-name">{states[statIdx].city[citiIdx].name}</div>
-			<div id="city-description">{states[statIdx].city[citiIdx].description}</div>
 			<div id="city-title">{states[statIdx].city[citiIdx].name}</div>
+			<div id="city-name"> </div>
+			<div id="city-description">{states[statIdx].city[citiIdx].description}</div>
 		</div>
 		<br/><br/>
 
@@ -191,9 +191,9 @@ function App()
 			})}
 		</select>
 		<div  className="NameDescTitle">
-			<div id="city-name">{states[statIdx].city[citiIdx].landmarks[landIdx].name}</div>
-			<div id="city-description">{states[statIdx].city[citiIdx].landmarks[landIdx].description}</div>
 			<div id="city-title">{states[statIdx].city[citiIdx].landmarks[landIdx].name}</div>
+			<div id="city-name"> </div>
+			<div id="city-description">{states[statIdx].city[citiIdx].landmarks[landIdx].description}</div>
 		</div>
 		<br/><br/>
 	</div>
